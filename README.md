@@ -17,3 +17,8 @@ devtools::install_github("D-iii-S/d3srutils")
 | Function     | Description   |
 | :----------- | :------------ |
 | `d3s_printf` | C-like printf |
+
+## Development
+
+  - Run `./bin/make.R` before commit to ensure that `README.md` is
+    up-to-date and the code is well-formatted.

@@ -43,3 +43,8 @@ kable(data.frame(
     Description=overview.descr
 ))
 ```
+
+## Development
+
+* Run `./bin/make.R` before commit to ensure that `README.md` is up-to-date
+  and the code is well-formatted.
