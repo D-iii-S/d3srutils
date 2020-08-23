@@ -1,0 +1,23 @@
+Package: rutils
+Title: D3S R Utilities
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Lubomir",
+           family = "Bulej",
+           role = c("aut")),
+    person(given = "Vojtech",
+           family = "Horky",
+           role = c("aut", "cre"),
+           email = "horky@d3s.mff.cuni.cz",
+           comment = c(ORCID = "0000-0003-2146-160X")),
+    person(given = "Petr",
+           family = "Tuma",
+           role = c("aut"))
+    )
+Description: Collection of various simple functions that we copy over
+    and over again.
+License: Apache License (>= 2.0)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
