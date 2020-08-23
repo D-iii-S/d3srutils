@@ -1,0 +1,23 @@
+name: lintr
+on: [push, pull_request]
+jobs:
+  linux:
+    if: contains(github.event.head_commit.message, '[nolint]') == false
+    runs-on: ubuntu-latest
+    container: rocker/tidyverse:latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install apt-get dependencies
+      run: |
+        apt-get update
+        apt-get install git ssh curl bzip2 -y
+    - name: Install lintr
+      run: |
+        Rscript -e "install.packages('lintr', repos = 'https://cloud.r-project.org')"
+      shell:
+        bash
+    - name: Running lintr
+      run: |
+        Rscript -e "x <- lintr::lint_dir('R'); print(x); quit('no', length(names(x)))"
+      shell:
+        bash
