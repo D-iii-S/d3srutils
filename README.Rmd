@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo=FALSE, message=FALSE}
+# Load the libraries for later use
+library(tools)
+library(knitr)
+```
+
+# D3S R Utils
+
+Collection of various simple functions that we copy over and over again.
+
+
+## Installation
+
+```r
+# install.packages("devtools")
+devtools::install_github("D-iii-S/d3srutils")
+```
+
+
+## Function Overview
+
+```{r, echo=FALSE, message=FALSE, results='asis', collapse=TRUE}
+get.by.tag <- function(rd, tag) {
+    tags <- tools:::RdTags(rd)
+    rd[[which(tags == tag)]][[1]][1]
+}
+
+overview.names <- c()
+overview.descr <- c()
+for (filename in list.files("man", full.names=T)) {
+    rd <- parse_Rd(filename)
+    overview.names <- c(overview.names, get.by.tag(rd, "\\name"))
+    overview.descr <- c(overview.descr, get.by.tag(rd, "\\title"))
+}
+kable(data.frame(
+    Function=unlist(lapply(overview.names, FUN=function(x) { sprintf("`%s`", x) })),
+    Description=overview.descr
+))
+```
