@@ -10,6 +10,7 @@ Collection of various simple functions that we copy over and over again.
 ``` r
 # install.packages("devtools")
 devtools::install_github("D-iii-S/d3srutils")
+library("d3s")
 ```
 
 ## Function Overview
