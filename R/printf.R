@@ -6,6 +6,6 @@
 #' @param ... Arguments to be formatted.
 #'
 #' @export
-d3s_printf <- function(fmt, ...) {
+printf <- function(fmt, ...) {
     writeLines(sprintf(fmt = fmt, ...), sep = "")
 }

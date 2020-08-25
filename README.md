@@ -14,9 +14,9 @@ devtools::install_github("D-iii-S/d3srutils")
 
 ## Function Overview
 
-| Function     | Description   |
-| :----------- | :------------ |
-| `d3s_printf` | C-like printf |
+| Function | Description   |
+| :------- | :------------ |
+| `printf` | C-like printf |
 
 ## Development
 
