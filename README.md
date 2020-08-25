@@ -14,9 +14,10 @@ devtools::install_github("D-iii-S/d3srutils")
 
 ## Function Overview
 
-| Function | Description   |
-| :------- | :------------ |
-| `printf` | C-like printf |
+| Function             | Description                    |
+| :------------------- | :----------------------------- |
+| `camera_ready_theme` | Camera-ready theme for ggplots |
+| `printf`             | C-like printf                  |
 
 ## Development
 

@@ -17,6 +17,9 @@ Authors@R:
 Description: Collection of various simple functions that we copy over
     and over again.
 License: Apache License (>= 2.0)
+Imports:
+    ggplot2,
+    ggthemes
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
