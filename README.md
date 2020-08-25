@@ -14,10 +14,18 @@ devtools::install_github("D-iii-S/d3srutils")
 
 ## Function Overview
 
-| Function             | Description                    |
-| :------------------- | :----------------------------- |
-| `camera_ready_theme` | Camera-ready theme for ggplots |
-| `printf`             | C-like printf                  |
+| Function               | Description                                 |
+| :--------------------- | :------------------------------------------ |
+| `camera_ready_theme`   | Camera-ready theme for ggplots              |
+| `logger_banner`        | Logs a banner message.                      |
+| `logger_crazy`         | Logs a detailed debugging message.          |
+| `logger_debug`         | Logs a debugging message.                   |
+| `logger_info`          | Logs an information message.                |
+| `logger_level`         | Set logging level.                          |
+| `logger_progress_init` | Initializes logger-based progress messages. |
+| `logger_progress`      | Inform about one task completion.           |
+| `logger_warn`          | Logs a warning message.                     |
+| `printf`               | C-like printf                               |
 
 ## Development
 
