@@ -8,7 +8,8 @@ msg("Importing...")
 library(devtools)
 library(lintr)
 
-msg("Building README.md...")
+msg("Generating documentation and README.md...")
+devtools::document()
 devtools::build_readme()
 
 msg("Running lint...")
