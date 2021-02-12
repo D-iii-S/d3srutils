@@ -19,7 +19,8 @@ Description: Collection of various simple functions that we copy over
 License: Apache License (>= 2.0)
 Imports:
     ggplot2,
-    ggthemes
+    ggthemes,
+    parallel
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

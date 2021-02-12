@@ -27,6 +27,9 @@ library("d3s")
 | `logger_progress`      | Inform about one task completion.           |
 | `logger_warn`          | Logs a warning message.                     |
 | `printf`               | C-like printf                               |
+| `simple_jobs_collect`  | Waits for completion of all simple-jobs.    |
+| `simple_jobs_init`     | Initializes simple-jobs.                    |
+| `simple_jobs_submit`   | Submits new task to simple-jobs.            |
 
 ## Development
 
