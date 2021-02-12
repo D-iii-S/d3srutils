@@ -1,4 +1,4 @@
-#' Camera-ready theme for ggplots
+#' Camera-ready theme for ggplots.
 #'
 #' Based on Tufte theme with several sizing adjustments.
 #'

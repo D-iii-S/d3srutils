@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggplot_themes.R
 \name{camera_ready_theme}
 \alias{camera_ready_theme}
-\title{Camera-ready theme for ggplots}
+\title{Camera-ready theme for ggplots.}
 \usage{
 camera_ready_theme()
 }

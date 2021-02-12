@@ -2,7 +2,7 @@
 % Please edit documentation in R/printf.R
 \name{printf}
 \alias{printf}
-\title{C-like printf}
+\title{C-like printf.}
 \usage{
 printf(fmt, ...)
 }

@@ -1,4 +1,4 @@
-#' C-like printf
+#' C-like printf.
 #'
 #' Behaves exactly like printf from C: no automatic line endings etc.
 #'
