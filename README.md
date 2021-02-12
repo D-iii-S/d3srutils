@@ -15,21 +15,22 @@ library("d3s")
 
 ## Function Overview
 
-| Function               | Description                                 |
-| :--------------------- | :------------------------------------------ |
-| `camera_ready_theme`   | Camera-ready theme for ggplots              |
-| `logger_banner`        | Logs a banner message.                      |
-| `logger_crazy`         | Logs a detailed debugging message.          |
-| `logger_debug`         | Logs a debugging message.                   |
-| `logger_info`          | Logs an information message.                |
-| `logger_level`         | Set logging level.                          |
-| `logger_progress_init` | Initializes logger-based progress messages. |
-| `logger_progress`      | Inform about one task completion.           |
-| `logger_warn`          | Logs a warning message.                     |
-| `printf`               | C-like printf                               |
-| `simple_jobs_collect`  | Waits for completion of all simple-jobs.    |
-| `simple_jobs_init`     | Initializes simple-jobs.                    |
-| `simple_jobs_submit`   | Submits new task to simple-jobs.            |
+| Function                   | Description                                       |
+| :------------------------- | :------------------------------------------------ |
+| `camera_ready_theme`       | Camera-ready theme for ggplots                    |
+| `logger_banner`            | Logs a banner message.                            |
+| `logger_crazy`             | Logs a detailed debugging message.                |
+| `logger_debug`             | Logs a debugging message.                         |
+| `logger_info`              | Logs an information message.                      |
+| `logger_level`             | Set logging level.                                |
+| `logger_progress_init`     | Initializes logger-based progress messages.       |
+| `logger_progress`          | Inform about one task completion.                 |
+| `logger_warn`              | Logs a warning message.                           |
+| `printf`                   | C-like printf                                     |
+| `simple_jobs_collect`      | Waits for completion of all simple-jobs.          |
+| `simple_jobs_init`         | Initializes simple-jobs.                          |
+| `simple_jobs_submit`       | Submits new task to simple-jobs.                  |
+| `write_csv_non_scientific` | Save tibble into CSV without scientific notation. |
 
 ## Development
 
