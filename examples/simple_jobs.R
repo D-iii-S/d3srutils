@@ -47,7 +47,8 @@ simple_jobs_init()
 for (i in x_types) {
     simple_jobs_submit(emulate_bootstrap((x %>% filter(type == i))[["value"]], SUBSET_SIZE, REPLICAS), i)
 }
-x_results <- simple_jobs_collect()
+logger_info(" ... jobs submitted ... ")
+x_results <- simple_jobs_collect(function(remaining) { logger_info(" ... %d jobs still in flight ...", remaining) }, 5)
 for (i in x_types) {
     x_result_multi <- x_result_multi %>% add_row(make_tibble_with_samples(i, x_results[[i]]))
 }

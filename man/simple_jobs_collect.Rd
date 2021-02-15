@@ -4,11 +4,18 @@
 \alias{simple_jobs_collect}
 \title{Waits for completion of all simple-jobs.}
 \usage{
-simple_jobs_collect()
+simple_jobs_collect(on_waiting = NULL, on_waiting_interval = 5)
+}
+\arguments{
+\item{on_waiting}{Information callback.}
+
+\item{on_waiting_interval}{Minimal interval between on_waiting calls.}
 }
 \value{
 Task results as list, indexed by task name.
 }
 \description{
-Waits for completion of all simple-jobs.
+It is possible to specify a callback that is executed periodically
+while waiting for the jobs to finish. It receives single parameter:
+number of jobs that are still computing.
 }

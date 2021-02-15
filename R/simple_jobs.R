@@ -70,13 +70,32 @@ simple_jobs_submit <- function(expr, name = NULL) {
     name
 }
 
+# Get current time in seconds.
+#
+simple_jobs_ts_now_ <- function(seconds_to_add = 0) {
+    as.numeric(Sys.time()) + seconds_to_add
+}
+
 #' Waits for completion of all simple-jobs.
 #'
+#' It is possible to specify a callback that is executed periodically
+#' while waiting for the jobs to finish. It receives single parameter:
+#' number of jobs that are still computing.
+#'
 #' @return Task results as list, indexed by task name.
+#' @param on_waiting Information callback.
+#' @param on_waiting_interval Minimal interval between on_waiting calls.
 #'
 #' @export
-simple_jobs_collect <- function() {
+simple_jobs_collect <- function(on_waiting = NULL, on_waiting_interval = 5) {
+    on_waiting_next <- simple_jobs_ts_now_(on_waiting_interval)
     while (simple_jobs_env$tasks > 0) {
+        if (!is.null(on_waiting)) {
+            if (on_waiting_next < simple_jobs_ts_now_()) {
+                on_waiting_next <- simple_jobs_ts_now_(on_waiting_interval)
+                on_waiting(simple_jobs_env$tasks)
+            }
+        }
         simple_jobs_collect_()
     }
 
